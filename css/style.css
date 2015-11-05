@@ -208,14 +208,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	color: #333;
 }
 #about img {
-	border-radius: 50%;
-	width: 200px;
-	height: 200px;
-	display: inline-block;
+	border-radius: 33%;
+    width: 150px;
+    height: 180px;
+    display: inline-block;
 }
 #about p {
 	margin-top: 20px;
 	margin-bottom: 30px;
+	line-height: 30px;
 }
 /* Services Section */
 #services {
@@ -754,7 +755,7 @@ section {
 	padding: 120px 0;
 }
 header .intro-text {
-	padding-top: 300px;
+	/*padding-top: 300px;*/
 	padding-bottom: 200px;
 }
 #portfolio .portfolio-item {
