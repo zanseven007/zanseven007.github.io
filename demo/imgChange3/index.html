@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>homework-2</title>
+    <style>
+        *{margin:0;padding:0;}
+        #content{
+            margin:20px;
+            border-top: 1px solid black;
+            width:500px;
+            text-align: center;
+        }
+        #div1{
+            margin-top: 10px;
+            width: 450px;
+            height: 450px;
+            border: 1px solid black;
+            position: relative;
+        }
+        #top1{
+            filter:alpha(opacity=60);  /* ie 有效*/
+            -moz-opacity:0.6; /* Firefox  有效*/
+            opacity: 0.6; /* 通用，其他浏览器  有效*/
+            width:450px;
+            text-align: center;
+            background: black;
+            color: aliceblue;
+            position: absolute;
+            top:0;
+        }
+        #bottom1{
+            filter:alpha(opacity=60);  /* ie 有效*/
+            -moz-opacity:0.6; /* Firefox  有效*/
+            opacity: 0.6; /* 通用，其他浏览器  有效*/
+            width:450px;
+            text-align: center;
+            background: black;
+            color: aliceblue;
+            position: absolute;
+            bottom:0;
+        }
+        #lefta{
+            filter:alpha(opacity=50);  /* ie 有效*/
+            -moz-opacity:0.5; /* Firefox  有效*/
+            opacity: 0.5; /* 通用，其他浏览器  有效*/
+            color:black;
+            background:aliceblue;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            top:170px;
+            margin:10px;
+            line-height: 40px;
+        }
+        #righta{
+            filter:alpha(opacity=50);  /* ie 有效*/
+            -moz-opacity:0.5; /* Firefox  有效*/
+            opacity: 0.5; /* 通用，其他浏览器  有效*/
+            margin: 10px;
+            color:black;
+            background:aliceblue;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            top:170px;
+            right: 0;
+        }
+        #lefta:hover{
+            background:#f1f1f1;
+            filter:alpha(opacity=90);  /* ie 有效*/
+            -moz-opacity:0.9; /* Firefox  有效*/
+            opacity: 0.9; /* 通用，其他浏览器  有效*/
+        }
+        #righta:hover{
+            filter:alpha(opacity=90);  /* ie 有效*/
+            -moz-opacity:0.9; /* Firefox  有效*/
+            opacity: 0.9; /* 通用，其他浏览器  有效*/
+            background:#f1f1f1;
+        }
+    </style>
+    <script>
+
+    window.onload= function () {
+        var oSort1=document.getElementById("sort1");
+        var oCircle1=document.getElementById("circle1");
+        var oP1=document.getElementById("p1");
+        var oDiv1=document.getElementById("div1");
+        var oTop1=document.getElementById("top1");
+        var oBottom1=document.getElementById("bottom1");
+        var oLefta=document.getElementById("lefta");
+        var oRighta=document.getElementById("righta");
+        var oImg1=document.getElementById("img1");
+        var num=0;
+        var Img1=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+        var Text1=["第一张","第二张","第三张","第四张"];
+        oSort1.onclick=function (){
+            oP1.innerHTML="现在是顺序切图模式";
+            oLefta.onclick=function (){
+                num--;
+                if(num>=0) {
+                    oImg1.src = Img1[num];
+                    oTop1.innerHTML=num+1+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[num];
+                }else{num=0;
+                    alert("亲，已经是第一张了");}
+            };
+            oRighta.onclick=function (){
+                num++;
+                if(num<Img1.length) {
+                    oImg1.src = Img1[num];
+                    oTop1.innerHTML=num+1+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[num];
+                }else{num=3;
+                    alert("亲，已经是最后一张了");}
+            };
+
+        };
+        oCircle1.onclick=function (){
+            oP1.innerHTML="现在是循环切图模式";
+            oLefta.onclick=function (){
+                num--;
+                if(num!=-1) {
+                    oImg1.src = Img1[num];
+                    oTop1.innerHTML=num+1+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[num];
+                }else{num=Img1.length-1;
+                    oImg1.src = Img1[3];
+                    oTop1.innerHTML=4+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[3];}
+            };
+            oRighta.onclick=function (){
+                num++;
+                if(num!=Img1.length) {
+                    oImg1.src = Img1[num];
+                    oTop1.innerHTML=num+1+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[num];
+                }else{num=0;
+                    oImg1.src = Img1[0];
+                    oTop1.innerHTML=1+"/"+Img1.length;
+                    oBottom1.innerHTML=Text1[0];}
+            };
+
+        };
+
+    };
+
+    </script>
+</head>
+<body>
+<div id="content">
+    <input type="button" value="顺序切换" id="sort1" />
+    <input type="button" value="循环切换" id="circle1" />
+    <p id="p1">现在是顺序切图模式</p>
+    <div id="div1">
+        <img id="img1" src="img/1.jpg" width="450" height="450" />
+      <p id="top1">1/4</p>
+      <p id="bottom1">第一张</p>
+      <a id="lefta"><</a>
+      <a id="righta">></a>
+    </div>
+</div>
+</body>
+</html>

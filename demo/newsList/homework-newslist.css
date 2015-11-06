@@ -1,0 +1,3 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;width: 300px;text-align: center;line-height: 50px;border-bottom: 1px dashed #ffffff;background:darkturquoise;}
+.li-div{width:300px;height: 200px;display: none;border: 1px solid black;background:#ffffff;}

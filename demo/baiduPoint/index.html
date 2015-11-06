@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+       <title></title>
+    <style type="text/css">
+        h3,body,div,ul,li,img{margin:0;padding: 0;}
+        h3{margin-right: 3px;float: left;}
+        div{width: 24px;height: 24px;margin-right: 3px;float: left;background: url("img/baidu_1.png") no-repeat;}
+        section{width: 600px;height: 500px;margin: 0 auto;padding: 50px; }
+        .yellowStar{background: url("img/baidu_3.png")}
+    </style>
+
+    <script>
+        window.onload=function(){
+           var aDiv=document.getElementsByTagName("div");
+           var oSpan=document.getElementsByTagName("span")[0];
+           var text1=["很差","一般","好评","很棒","力荐"];
+           var offOn=0;
+           var num=0;
+           for(var i=0;i<aDiv.length;i++) {
+               aDiv[i].index = i;
+               aDiv[i].onmouseover = function () {
+                   if (offOn == 0) {
+                       oSpan.innerHTML = text1[this.index];
+                       for (var j = 0; j <= this.index; j++)
+                           aDiv[j].className = "yellowStar";
+                   }
+                   else if (offOn == 2) {
+                       oSpan.innerHTML = text1[this.index];
+                       for (var z = 0; z <aDiv.length; z++) {
+                           aDiv[z].className = "";
+                       }
+                       for (var k = 0; k <= this.index; k++)
+                           aDiv[k].className = "yellowStar";
+                   }
+               };
+
+               aDiv[i].onmouseout = function () {
+                   if (offOn == 0) {
+                       oSpan.innerHTML = "";
+                       for (var j = 0; j <= this.index; j++)
+                           aDiv[j].className = "";
+                   }
+                   if (offOn == 2) {
+                       oSpan.innerHTML = text1[this.index];
+                       for (var z = 0; z <aDiv.length; z++) {
+                           aDiv[z].className = "";
+                       }
+                       for (var k = 0; k <=num; k++) {
+                           aDiv[k].className = "yellowStar";
+                       }
+                   }
+               };
+               aDiv[i].onclick = function () {
+                   num=this.index;
+                   offOn = 1;
+                   if (offOn == 1 || 2) {
+                       oSpan.innerHTML = text1[this.index];
+                       for (var k = 0; k < aDiv.length; k++) {
+                           aDiv[k].className = "";
+                       }
+                       for (var j = 0; j <= this.index; j++) {
+                           aDiv[j].className = "yellowStar";
+                       }
+                       offOn = 2;
+                   }
+               };
+           }
+        };
+    </script>
+    <!--<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>-->
+</head>
+<body>
+<section>
+<h3>总体评价:</h3>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<span>请评价星数</span>
+</section>
+</body>
+</html>

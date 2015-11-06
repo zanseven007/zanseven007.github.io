@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>homework-changeText</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #content{margin:50px;}
+        li{list-style: none;width: 500px;border-bottom: 1px dashed brown;}
+        .bf img{display: inline-block;margin-left: 10px; cursor: pointer;}
+        .af{display: none;}
+        .af a{color: greenyellow;}
+        .af a:hover{background: green;color: #ffffff;}
+    </style>
+    <script>
+        window.onload=function(){
+            var aLi=document.getElementsByTagName("li");
+            for(var i=0;i<aLi.length;i++)
+            {
+                fn1(aLi[i]);
+
+            }
+            function fn1(li){
+                var aDiv=li.getElementsByTagName("div");
+                var oImg =li.getElementsByTagName("img")[0];
+                var aA=li.getElementsByTagName("a");
+                var oInput=li.getElementsByTagName("input")[0];
+                var oSpan=li.getElementsByTagName("span")[0];
+                oImg.onclick=function(){
+                    aDiv[0].style.display="none";
+                    aDiv[1].style.display="block";
+                    oInput.value=oSpan.innerHTML;
+                    oInput.focus();
+                };
+                aA[0].onclick=function(){
+                    aDiv[0].style.display="block";
+                    aDiv[1].style.display="none";
+                    oSpan.innerHTML=oInput.value;
+
+                };
+                aA[1].onclick=function(){
+                    aDiv[0].style.display="block";
+                    aDiv[1].style.display="none";
+                };
+            }
+
+        };
+    </script>
+</head>
+<body>
+<div id="content">
+    <ul>
+        <li>
+            <div class="bf">
+                <span>赞鱼鱼真是太好了</span>
+                <img src="img/ico1.gif" />
+            </div>
+            <div class="af">
+                <input type="text" />
+                <a>保存</a>
+                <a>取消</a>
+            </div>
+        </li>
+        <li>
+            <div class="bf">
+                <span>赞鱼鱼真是太好了</span>
+                <img src="img/ico1.gif" />
+            </div>
+            <div class="af">
+                <input type="text" />
+                <a>保存</a>
+                <a>取消</a>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
