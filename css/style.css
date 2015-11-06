@@ -213,6 +213,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     height: 180px;
     display: inline-block;
 }
+.img-about{
+	background: url(../img/about.jpg) no-repeat 0px -40px;
+	width: 133px;
+	height: 133px;
+	border-radius: 50%;
+    margin: 0 auto;
+}
 #about p {
 	margin-top: 20px;
 	margin-bottom: 30px;
