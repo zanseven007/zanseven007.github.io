@@ -1,0 +1,442 @@
+@font-face{
+	font-family: 'atlanta';
+    src: url('atlanta/atlanta-webfont.eot'); /* IE9*/
+    src: url('atlanta/atlanta-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('atlanta/atlanta-webfont.woff') format('woff'), /* chrome、firefox */
+    url('atlanta/atlanta-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('atlanta/atlanta-webfont.svg#atlanta') format('svg'); /* iOS 4.1- */
+}
+body{
+    font-family:"atlanta";
+}
+.atlanta{
+	font-family:"atlanta";
+	font-size:14px;
+	font-style:normal;
+}
+.full_screen{
+	height: 100%;
+    padding: 0;
+    text-align: left;
+    display: table;
+    width: 100%;
+    color: #fff;
+    background-color: #333;
+    background-size: cover !important;   
+}
+.background_1{
+    background-image: url('http://cdn.yunejian.com/show-room/img/background1.png') ;
+}
+.background_2{
+    background-image: url('http://cdn.yunejian.com/show-room/img/background2.png') ;
+}
+.background_3{
+    transition: background-color 4s;
+    background-image: url('http://cdn.yunejian.com/show-room/img/background3.png') ;
+}
+.background_4{
+    background-image: url('http://cdn.yunejian.com/show-room/img/background4.png') ;
+}
+nav{
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.topshow{
+    display: block;
+    opacity: 1;
+}
+.logo_box{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    padding-top: 10px;
+    margin-left: 20px;
+    position: fixed;
+    opacity: 0.6;
+    z-index: 100;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.item_box{
+    float: left;
+    z-index: 100;
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    text-align: center;
+    padding: 28px 18px;
+    box-sizing: border-box !important;
+    margin-left: 20px;
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    left: 80px;
+    opacity: 0.6;
+}
+
+.item_box span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    font-size: 0px;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+.item_box span:before{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    transition: transform 0.3s, background-color 0.3s;
+}
+.item_box span:after{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: '';
+    transition: transform 0.3s, background-color 0.3s;
+}
+.item_box span:before{
+    transform: translateY(-300%);
+}
+.item_box span:after{
+    transform: translateY(200%);
+}
+.open{
+    opacity: 1;
+}
+.item_box.open span:before{
+    transform: translateY(-400%);
+}
+.item_box.open span:after{
+    transform: translateY(300%);
+}
+.nav_box{
+    float: left;
+    line-height: 60px;
+    margin-left: 230px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.nav_box li{
+    display: inline-block;
+    color:#fff;
+    margin-right: 55px;
+}
+.nav_box li a{
+    opacity: 0.6;
+    color: #fff;
+}
+.nav_box li a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+    color: #fff;
+}
+.language_box{
+    float: right;
+    line-height: 60px;
+    margin-right: 50px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+.language_box em{
+    color:rgba(120,120,120,0.8);
+}
+.first_content_box{
+    position: relative;
+    top: 60px;
+}
+.center_box{
+    margin:0 auto;
+    display: inherit;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+.first_1{
+    width: 15%;
+}
+.first_2{
+    width: 70%;
+}
+.second_wrap{
+    width: 80%;
+    margin:0 auto;
+    position: relative;
+}
+.second_content_box{
+    position: absolute;
+    top: 100px;
+    right: 90px;
+    text-align: right;
+}
+.second_content_box h2{
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+.second_content_box span{
+    display: block;
+    width: 113px;
+    height: 9px;
+    background: #fff;
+    float: right;
+    margin-bottom: 20px;
+}
+.second_content_box p{
+    clear: both;
+    font-size: 22px;
+    line-height: 45px;
+}
+.second_content_box div{
+    width: 100px;
+    height: 100px;
+    color: #000;
+    background: #fff;
+    line-height: 100px;
+    text-align: center;
+    font-size: 55px;
+    float: right;
+    margin-top: 35px;
+}
+.third_wrap{
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+}
+.third_content_box{
+    position: absolute;
+    top: 100px;
+    left: ;: 90px;
+    text-align: left;
+    width: 100%;
+}
+
+.third_content_box h2{
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-size: 55px;
+    line-height: 41px;
+    margin-bottom: 30px;
+    margin-left: 10%
+}
+.third_content_box span{
+    font-size: 24px;
+    margin-left: 10px;
+}
+.third_content_box div{
+    font-size: 36px;
+    text-decoration: underline;
+    opacity: 0.7;
+    padding:35px 0 35px 10%;
+    max-width: 100%;
+}
+.third_content_box div a{
+    cursor: pointer;
+}
+.hr{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 0.1;
+}
+.three_hover{
+    background: #000;
+}
+.three_hover h2{
+    background: #000;
+    color: #fff;
+    opacity: 0.7;
+}
+.a1,.a2,.a3,.a4{
+    transition: padding 0.8s;
+}
+.three_hover_div1{
+    opacity: 1 !important;
+    background-image: url('http://cdn.yunejian.com/show-room/img/three_1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:0 -166px;
+    padding: 60px 0 60px 10% !important;
+}
+.three_hover_div2{
+    opacity: 1 !important;
+    background-image: url('http://cdn.yunejian.com/show-room/img/three_2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:0 -36px;
+    padding: 60px 0 60px 10% !important; 
+}
+.three_hover_div3{
+    opacity: 1 !important;
+    background-image: url('http://cdn.yunejian.com/show-room/img/three_3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:0 -35px;
+    padding: 60px 0 60px 10% !important; 
+}   
+.three_hover_div4{
+    opacity: 1 !important;
+    background-image: url('http://cdn.yunejian.com/show-room/img/three_4.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position:0 -166px;
+    padding: 60px 0 60px 10% !important; 
+}      
+.three_hover span{
+    display: none;
+}
+.fourth_wrap{
+    width: 80%;
+    margin:0 auto;
+    position: relative;
+}
+.fourth_content_box_right{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    text-align: right;
+}
+.fourth_content_box_left{
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    text-align: left;
+    width: 666px;
+    height: 400px;
+    background: url('http://cdn.yunejian.com/show-room/img/take_time.png') no-repeat center center;
+    background-color: #fff;
+    background-size: cover !important; 
+}
+.fourth_content_box_right h2{
+    font-size: 55px;
+    display: inline-block;
+    margin-right: 10px;
+}
+@keyframes dateanimation{
+    0%{
+        transform: scale(1) rotateY(0deg);
+        background: rgba(0,0,0,1);
+    }
+    50%{
+        transform: scale(1.5) rotateY(360deg);
+        background: rgba(155,155,155,1);
+    }
+    100%{
+        transform: scale(1) rotateY(0deg);
+        background: rgba(0,0,0,1);
+    }
+}
+@-webkit-keyframes dateanimation{
+    0%{
+        transform: scale(1) rotateY(0deg);
+        background: rgba(0,0,0,1);
+    }
+    50%{
+        transform: scale(1.5) rotateY(360deg);
+        background: rgba(155,155,155,1);
+    }
+    100%{
+        transform: scale(1) rotateY(0deg);
+        background: rgba(0,0,0,1);
+    }
+}
+.four_date_box1{
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0);
+    color: #000;
+    position: absolute;
+    top: 41px;
+    left: 400px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.four_date_box2{
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0);
+    color: #000;
+    position: absolute;
+    top: 170px;
+    left: 523px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.four_date_box1 h3,.four_date_box2 h3
+{
+    font-size: 26px;
+    padding: 15px;
+}
+.fourth_content_box_left p{
+    text-align: center;
+}
+.four_active{
+    background: rgba(0,0,0,1);
+    color: #fff;
+    animation:dateanimation 1.5s;
+    -webkit-animation:dateanimation 1.5s;
+}
+.footer_wrap{
+    width: 80%;
+    margin:0 auto;
+    position: relative;
+}
+.footer_wrap h3{
+    color: #fff;
+    font-size: 32px;
+    margin-top: 100px;
+}
+.footer_wrap p{
+    color: #fff;
+    display: inline-block;
+    margin-top: 60px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+.footer_wrap span{
+    color: #fff;
+    margin-left: 50px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+.footer_wrap img{
+    display: block;
+    width: 50%;
+    margin-top: 115px;
+}
+.footer_right{
+    position: absolute;
+    top: -70px;
+    right: 0;
+}
+.footer_right li{
+    line-height: 50px;
+    transition: all 0.5s;
+}
+.footer_right li a{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+.footer_right li:hover{
+    transform: scale(1.2);
+}
+
