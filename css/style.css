@@ -745,6 +745,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-weight: 600;
 	letter-spacing: -2px;
 	color: #2c3e50;
+	text-shadow: 2px 2px 1px #ccc;
 }
 .intro .intro-body .intro-text {
 	float: left;
@@ -757,6 +758,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 40px;
 	color: #76818d;
 	margin-top: 20px;
+	text-shadow: 1px 1px 1px #ccc;
 }
 section {
 	padding: 120px 0;
