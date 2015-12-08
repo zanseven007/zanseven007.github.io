@@ -6,7 +6,7 @@ $(window).load(function() {
 	$("#status").fadeOut(); // will first fade out the loading animation
 	$("#preloader").delay(400).fadeOut("medium"); // will fade out the white DIV that covers the website.
 	//顶部锚点平滑滚动开始
-		var arrLi=['.home','.services','.events','.collections','.brand','.contact']
+		var arrLi=['.services','.events','.collections','.brand','.contact']
 		var arrH=[];
 		for(var i=0;i<arrLi.length;i++){
 			var href=$(arrLi[i]).attr("href");
