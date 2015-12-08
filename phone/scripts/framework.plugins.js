@@ -144,7 +144,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                         s = {};
                     var o = n("#swipebox-caption, #swipebox-action");
                     o.addClass("visible-bars");
-                    e.setTimeout();
                     n("body").bind("touchstart", function(e) {
                         n(this).addClass("touching");
                         s = e.originalEvent.targetTouches[0];
@@ -163,15 +162,16 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                             e.getPrev()
                         } else if (t <= -r) {
                             e.getNext()
-                        } else {
-                            if (!o.hasClass("visible-bars")) {
-                                e.showBars();
-                                e.setTimeout()
-                            } else {
-                                e.clearTimeout();
-                                e.hideBars()
-                            }
-                        }
+                        } 
+                        // else {
+                        //     if (!o.hasClass("visible-bars")) {
+                        //         e.showBars();
+                        //         e.setTimeout()
+                        //     } else {
+                        //         e.clearTimeout();
+                        //         e.hideBars()
+                        //     }
+                        // }
                         n(".touching").off("touchmove").removeClass("touching")
                     })
                 }
@@ -225,7 +225,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
                 var e = this;
                 var t = n("#swipebox-caption, #swipebox-action");
                 t.addClass("visible-bars");
-                e.setTimeout();
+                // e.setTimeout();
                 n("#swipebox-slider").click(function(n) {
                     if (!t.hasClass("visible-bars")) {
                         e.showBars();
