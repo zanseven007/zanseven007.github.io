@@ -63,10 +63,10 @@ $(document).ready(function() {
 		return false;
 	});	
     
-    $('#content, .header').click(function(){
-       $('.header, .footer-ball').removeClass('hide-header-left'); 
+    $('#content, .header').on("click",function(){
+       $('.header, .footer-ball').removeClass('hide-header-left');
+       snapper.close(); 
     });
-	
 	$('.sidebar-close').click(function() {
         $('.header, .footer-ball').removeClass('hide-header-left');
 		snapper.close();

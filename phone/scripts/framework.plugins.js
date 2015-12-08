@@ -448,7 +448,7 @@ function(e){e.preventDefault();doScroll(e)})};
             easing: 'ease-in-out',
             maxPosition: 80,
             minPosition: 0,
-            tapToClose: true,
+            tapToClose: false,
             touchToDrag: false,
             slideIntent: 40, // degrees
             minDragDistance: 5
