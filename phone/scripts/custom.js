@@ -5,6 +5,21 @@
 $(window).load(function() { 
 	$("#status").fadeOut(); // will first fade out the loading animation
 	$("#preloader").delay(400).fadeOut("medium"); // will fade out the white DIV that covers the website.
+	//顶部锚点平滑滚动开始
+		var arrLi=['.home','.services','.events','.collections','.brand','.contact']
+		var arrH=[];
+		for(var i=0;i<arrLi.length;i++){
+			var href=$(arrLi[i]).attr("href");
+			arrH[i]= $(href).offset().top;
+			navA(arrLi[i],arrH[i]);
+		}
+		function navA(cls,pos){
+		$(cls).click(function(){
+	        $("#content").animate({scrollTop: pos-120}, 1000);
+	        return false;
+	    });
+		}
+	//顶部锚点平滑滚动结束
 });
 
 $(document).ready(function() {
@@ -116,13 +131,13 @@ $(document).ready(function() {
 		]
 	}
 
-	window.onload = function(){
-		var pie_chart_1 = document.getElementById("generate-pie-chart").getContext("2d");
-		window.pie_chart_1 = new Chart(pie_chart_1).Pie(pieData);
+	
+		// var pie_chart_1 = document.getElementById("generate-pie-chart").getContext("2d");
+		// window.pie_chart_1 = new Chart(pie_chart_1).Pie(pieData);
     
-		var bar_chart_1 = document.getElementById("generate-bar-chart").getContext("2d");
-		window.pie_chart_1 = new Chart(bar_chart_1).Bar(barChartData);
-	};
+		// var bar_chart_1 = document.getElementById("generate-bar-chart").getContext("2d");
+		// window.pie_chart_1 = new Chart(bar_chart_1).Bar(barChartData);
+	
 	
 	//Animate.css scroll to begin animation //	
 	

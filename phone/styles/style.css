@@ -14,7 +14,7 @@ Platforms:   Mobile & Tablet
 /* 1. General */
 
 
-body{
+html,body{
 	height:100%;
 }
 
@@ -108,7 +108,7 @@ body{
     bottom:32px;
     left:50%;
     margin-left:-27px;
-    background-color:#d34836;
+    background-color:#2c3e50;
     border-radius:50px;
     color:#FFFFFF;
     text-align:center;
@@ -200,7 +200,7 @@ body{
 }
 
 .footer-up{
-    background-color:#2c3e50;
+    background-color:#d34836;
     line-height:32px!important;
 }
 
