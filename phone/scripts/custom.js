@@ -6,7 +6,7 @@ $(window).load(function() {
 	$("#status").fadeOut(); // will first fade out the loading animation
 	$("#preloader").delay(400).fadeOut("medium"); // will fade out the white DIV that covers the website.
 	//顶部锚点平滑滚动开始
-		var arrLi=['.services','.events','.collections','.brand','.contact','.BOUNDLESS','.TACITURNLI','.MUSEUM','.RENLISU']
+		var arrLi=['.services','.events','.collections','.contact','.BOUNDLESS','.TACITURNLI','.MUSEUM','.RENLISU']
 		var arrH=[];
 		for(var i=0;i<arrLi.length;i++){
 			var href=$(arrLi[i]).attr("href");
@@ -48,7 +48,19 @@ $(document).ready(function() {
     });
             
 
-	$('.swipebox').click(function(){ 
+	$('.swipebox1').click(function(){ 
+		$('.gallery').hide(0);
+		$('.portfolio-wide').hide(0);
+	});
+	$('.swipebox2').click(function(){ 
+		$('.gallery').hide(0);
+		$('.portfolio-wide').hide(0);
+	});
+	$('.swipebox3').click(function(){ 
+		$('.gallery').hide(0);
+		$('.portfolio-wide').hide(0);
+	});
+	$('.swipebox4').click(function(){ 
 		$('.gallery').hide(0);
 		$('.portfolio-wide').hide(0);
 	});
@@ -247,11 +259,6 @@ $(document).ready(function() {
        $(this).toggleClass('checklist-square-selected');
         return false;
     });    
-    
-    $('.checklist-round').click(function(){
-       $(this).toggleClass('checklist-round-selected');
-        return false;
-    });
 	
     //Switches
     
@@ -457,7 +464,19 @@ $(document).ready(function() {
 	/////////////////
 	//Image Gallery//
 	/////////////////
-	$(".swipebox").swipebox({
+	$(".swipebox1").swipebox({
+		useCSS : true, // false will force the use of jQuery for animations
+		hideBarsDelay : 3000 // 0 to always show caption and action bar
+	});
+	$(".swipebox2").swipebox({
+		useCSS : true, // false will force the use of jQuery for animations
+		hideBarsDelay : 3000 // 0 to always show caption and action bar
+	});
+	$(".swipebox3").swipebox({
+		useCSS : true, // false will force the use of jQuery for animations
+		hideBarsDelay : 3000 // 0 to always show caption and action bar
+	});
+	$(".swipebox4").swipebox({
 		useCSS : true, // false will force the use of jQuery for animations
 		hideBarsDelay : 3000 // 0 to always show caption and action bar
 	});

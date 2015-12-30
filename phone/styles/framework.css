@@ -120,7 +120,6 @@ p {
 	margin-bottom: 30px;
 	font-size:13px;
 	letter-spacing:0px;
-	word-break: break-all;
 }
 
 p > a {
@@ -351,7 +350,7 @@ a{
 }
 
 .full-bottom{
-	margin-bottom:30px!important;
+	margin-bottom:21px!important;
 }
 
 .clear {
@@ -476,7 +475,7 @@ a{
 	position:absolute;
 	left:50%; 
 	top:50%; 
-	background-image:url(../images/status.gif); 
+	background-image:url(http://cdn.yunejian.com/mshow-room/img/status.gif); 
 	background-size:64px 64px;
 	background-repeat:no-repeat;
 	background-position:center;

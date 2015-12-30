@@ -317,6 +317,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
             },
             openImg: function(e) {
                 var t = this;
+                console.log(a.eq(e).attr("rel"));
                 if (e < 0 || e >= a.length) {
                     return false
                 }

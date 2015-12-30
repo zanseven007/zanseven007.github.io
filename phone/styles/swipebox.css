@@ -4,11 +4,11 @@
 
 .gallery{
 	width:102%;
-	margin-left:-3%!important;
+	/*margin-left:-3%!important;
 	margin-top:-10px;
 	padding:0px;
 	margin:0px;
-	margin-bottom:30px;
+	margin-bottom:30px;*/
 }
 
 .gallery:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
@@ -78,7 +78,7 @@
 
 
 #swipebox-slider .slide {
-	background: url("../images/gallery/loader.gif") no-repeat center center;
+	background: url("http://cdn.yunejian.com/mshow-room/img/loader.gif") no-repeat center center;
 	height: 100%;
 	width: 100%;
 	line-height: 1px;
@@ -139,7 +139,7 @@
 
 #swipebox-action #swipebox-prev, #swipebox-action #swipebox-next,
 #swipebox-action #swipebox-close {
-	background-image: url("../images/gallery/icon3.png");
+	background-image: url("http://cdn.yunejian.com/mshow-room/img/icon3.png");
 	background-repeat: no-repeat;
 	border: none!important;
 	text-decoration: none!important;

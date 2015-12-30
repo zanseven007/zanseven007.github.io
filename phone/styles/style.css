@@ -17,7 +17,18 @@ Platforms:   Mobile & Tablet
 html,body{
 	height:100%;
 }
-
+@font-face {
+  font-family: 'iconfont';
+  src: url('http://at.alicdn.com/t/font_1451455555_4489093.eot'); /* IE9*/
+  src: url('http://at.alicdn.com/t/font_1451455555_4489093.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('http://at.alicdn.com/t/font_1451455555_4489093.woff') format('woff'), /* chrome、firefox */
+  url('http://at.alicdn.com/t/font_1451455555_4489093.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('http://at.alicdn.com/t/font_1451455555_4489093.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont";
+    font-size:16px;font-style:normal;
+}
 .disabled{
     display:none;
 }
@@ -37,29 +48,6 @@ html,body{
 
 .large-title h2{text-align:center;}
 .large-title p{text-align:center;}
-
-/*Backgrounds */
-
-.bg1{
-    background-image:url(../images/pictures/1.jpg);   
-    background-position:center center;
-}
-
-.bg2{
-    background-image:url(../images/pictures/2.jpg);   
-    background-position:center center;
-}
-
-.bg3{
-    background-image:url(../images/pictures/3.jpg);   
-    background-position:center center;
-}
-
-.bg4{
-    background-image:url(../images/pictures/4.jpg);   
-    background-position:center center;
-}
-
 
 
 /*Center Socials*/
@@ -207,7 +195,7 @@ html,body{
 .footer-menu{
     position:fixed;
     z-index:9999999;
-    background-image:url(../images/misc/menu-bg.png);
+    background-image:url(http://cdn.yunejian.com/mshow-room/img/menu-bg.png);
     background-size:100px 100px;
     width:100%;
     height:60px;
@@ -361,19 +349,20 @@ html,body{
 
 .snap-drawer a{
     font-family:'Roboto', sans-serif;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
     font-weight:600;
     font-size:11px;
     color:#d6dee6;
-    text-shadow:0px 2px 0px #000000;
+    /*text-shadow:0px 2px 0px #000000;*/
     width:80px;
     height:90px;
     text-align:center;
-    line-height:90px;
+    line-height:85px;
     padding-top:22px;
-    border-bottom:solid 1px #161b1f;
+    /*border-bottom:solid 1px #161b1f;*/
     -webkit-box-shadow: 0 1px 0 0 #3e444a;
             box-shadow: 0 1px 0 0 #3e444a;
+    position: relative;
 }
 
 .snap-drawer a:hover{
@@ -387,6 +376,9 @@ html,body{
     margin-bottom:-30px;
     padding-bottom:2px;
     font-size:20px;
+    position: absolute;
+    top: -9px;
+    left: 29px;
 }
 
 .snap-drawer .fa-mobile{
@@ -472,17 +464,17 @@ html,body{
 }
 
 .content-heading i{
-    position:absolute;
-    right:0px;
-    height:45px;
-    width:45px;
-    line-height:47px;
-    text-align:center;
-    top:0px;
-    color:#FFFFFF;
-    background-color:#1f1f1f;
-    border-radius:47px;
-    font-size:18px;
+    position: absolute;
+    right: 0px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    top: 0px;
+    color: #FFFFFF;
+    background-color: #1f1f1f;
+    border-radius: 47px;
+    font-size: 13px;
 }
 
 .content-heading em{
@@ -698,144 +690,6 @@ html,body{
     margin-right:-20px;
 }
 
-
-/*Back Button*/
-
-.back-button{
-    position:absolute;
-    right:0px;
-    z-index:10;
-    font-size:13px;
-}
-
-.back-button i{
-    padding-right:10px;
-    font-size:12px;
-}
-
-
-
-/*Reminder Box*/
-
-.reminder-check-square{
-    background-image:url(../images/ui/checkbox1.png);
-    background-repeat:no-repeat;
-    background-size:16px 18px;
-    background-position:10px 43px;
-}
-
-.reminder-check-round{
-    background-image:url(../images/ui/radio2.png);
-    background-repeat:no-repeat;
-    background-size:16px 18px;
-    background-position:10px 43px;
-}
-
-.reminder i{
-    padding-right:10px;
-}
-
-.reminder-check-square-selected{
-    background-image:url(../images/ui/checkbox1c.png);
-}
-
-.reminder-check-round-selected{
-    background-image:url(../images/ui/radio2c.png);
-}
-
-.reminder-check-square-selected em{opacity:0.5; transition:all 250ms ease;}
-.reminder-check-square-selected strong{opacity:0.5; transition:all 250ms ease;}
-
-.reminder-check-round-selected em{opacity:0.5; transition:all 250ms ease;}
-.reminder-check-round-selected strong{opacity:0.5; transition:all 250ms ease;}
-
-.reminder strong{
-    font-size:14px;
-    font-weight:600;
-    padding-left:50px;
-    color:#1f1f1f;
-    transition:all 250ms ease;
-}
-
-.reminder em{
-    display:block;
-    padding-left:50px;
-    transition:all 250ms ease;
-    font-style:normal
-}
-
-.reminder{
-    border-bottom:solid 1px rgba(0,0,0,0.1);
-    padding-bottom:30px;
-    padding-top:30px;
-}
-
-
-/*Checklists*/
-
-.checklist-square{
-    font-size:14px;
-    font-weight:500;
-    background-image:url(../images/ui/checkbox1.png);
-    background-size:16px 18px;
-    background-position:0px 32px;
-    background-repeat:no-repeat;
-    padding-left:30px;
-    border-bottom:solid 1px rgba(0,0,0,0.1);
-    padding-bottom:30px;
-    color:#1f1f1f;
-    transition:all 250ms ease;
-    padding-top:30px;
-}
-
-.checklist-square-selected:hover{
-    color:#1f1f1f;
-    text-decoration:line-through!important;
-    transition:all 250ms ease;
-}
-
-.checklist-square:hover{
-    color:#1f1f1f;
-}
-
-.checklist-square-selected{
-    background-image:url(../images/ui/checkbox1c.png);
-    text-decoration:line-through;
-    opacity:0.5;
-    transition:all 250ms ease;
-}
-
-.checklist-round{
-    font-size:14px;
-    font-weight:500;
-    background-image:url(../images/ui/radio1.png);
-    background-size:16px 18px;
-    background-position:0px 32px;
-    background-repeat:no-repeat;
-    padding-left:30px;
-    border-bottom:solid 1px rgba(0,0,0,0.1);
-    padding-bottom:30px;
-    color:#1f1f1f;
-    transition:all 250ms ease;
-    padding-top:30px;
-}
-
-.checklist-round-selected:hover{
-    color:#1f1f1f;
-    text-decoration:line-through!important;
-    transition:all 250ms ease;
-}
-
-.checklist-round:hover{
-    color:#1f1f1f;
-}
-
-.checklist-round-selected{
-    background-image:url(../images/ui/radio1c.png);
-    text-decoration:line-through;
-    opacity:0.5;
-    transition:all 250ms ease;
-}
 .sevice-p span{
     margin-top: 20px;
     display: block;
