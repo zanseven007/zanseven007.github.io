@@ -61,6 +61,8 @@ $('#nav').affix({
 
   	// Portfolio isotope filter
     $(window).load(function() {
+        $('.loading').fadeOut();
+        $('body').addClass('load');
         var $container = $('.portfolio-items');
         $container.isotope({
             filter: '*',
