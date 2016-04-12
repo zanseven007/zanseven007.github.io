@@ -150,63 +150,85 @@ ul, ol {
 	margin-right: 10px;
 }
 /* loading */
-.loading{
-	background: #3d4444;
-	color: #fff;
-	position: fixed;
-	width:100%;
-	height: 100%;
-	opacity: 1;
-}
-.spinner {
-	width: 90px;
-	height: 90px;
-	position: relative;
-	text-align: center;
-	margin: -45px 0 0 -45px;
-	-webkit-animation: rotate 2.0s infinite linear;
-	animation: rotate 2.0s infinite linear;
-	top: 50%;
-	left: 50%;
-}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
 
-.dot1, .dot2 {
-	width: 60%;
-	height: 60%;
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	background-color: #fff;
-	border-radius: 100%;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */ }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */ } }
 
-	-webkit-animation: bounce 2.0s infinite ease-in-out;
-	animation: bounce 2.0s infinite ease-in-out;
-}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #000000;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+  #preloader > div {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e85656;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+    /* Chrome, Firefox 16+, IE 10+, Opera */ }
+    #preloader > div:before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #209e91;
+      -webkit-animation: spin 3s linear infinite;
+      /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 3s linear infinite;
+      /* Chrome, Firefox 16+, IE 10+, Opera */ }
+    #preloader > div:after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #dfb81c;
+      -webkit-animation: spin 1.5s linear infinite;
+              animation: spin 1.5s linear infinite;
+      /* Chrome, Firefox 16+, IE 10+, Opera */ 
+  }
 
-.dot2 {
-	top: auto;
-	bottom: 0px;
-	-webkit-animation-delay: -1.0s;
-	animation-delay: -1.0s;
-}
-
-@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
-@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
-
-@-webkit-keyframes bounce {
-	0%, 100% { -webkit-transform: scale(0.0) }
-	50% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes bounce {
-	0%, 100% {
-		transform: scale(0.0);
-		-webkit-transform: scale(0.0);
-		} 50% {
-			transform: scale(1.0);
-			-webkit-transform: scale(1.0);
-		}
-	}
 	/* Home Section */
 	.intro {
 		display: table;

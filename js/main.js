@@ -61,7 +61,7 @@ $('#nav').affix({
 
   	// Portfolio isotope filter
     $(window).load(function() {
-        $('.loading').fadeOut();
+        $('#preloader').fadeOut();
         $('body').addClass('load');
         var $container = $('.portfolio-items');
         $container.isotope({
