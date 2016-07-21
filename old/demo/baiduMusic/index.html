@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>1</title>
+    <style>
+        div,ul,li,span{margin: 0;padding: 0;}
+        li{list-style: none;}
+        li{width:200px;height: auto;marin:1px 0;}
+        span{margin-left: 10px;}
+    </style>
+    <script>
+        window.onload=function(){
+        var oDiv=document.getElementsByTagName("div")[0];
+        var aInput=oDiv.getElementsByTagName("input");
+        var aSpan=oDiv.getElementsByTagName("span");
+        var aLi=oDiv.getElementsByTagName("li");
+
+        for(var i=0;i<aLi.length;i++)
+        {   aLi[i].index=i;
+            aLi[i].offOn=true;
+            aInput[i].index=i;
+            if(aLi[i].index%2==0)
+            {
+                aLi[i].style.backgroundColor="#F7FFFF";
+            }
+            aLi[i].onmouseover=function(){
+                this.style.backgroundColor="#EFEFEF";
+            };
+            aLi[i].onmouseout=function(){
+
+                if(aInput[this.index].checked==false){
+                if(this.index%2==0)
+                    {
+                        this.style.backgroundColor="#F7FFFF";
+                    }
+                    else{this.style.backgroundColor="";}
+                }
+            };
+            aLi[i].onclick=function(){
+                if(this.offOn){
+                    aInput[this.index].checked=true;
+                    if(aInput[this.index].checked==true)
+                    this.style.backgroundColor="#EFEFEF";
+                    this.offOn=false;
+                }else{
+                    aInput[this.index].checked=false;
+                    this.offOn=true;
+                }
+            };
+        }
+
+};
+    </script>
+</head>
+<body>
+<div>
+<ul>
+    <li><input type="checkbox"><span>safe and sound</span></li>
+    <li><input type="checkbox"><span>I`m yours</span></li>
+    <li><input type="checkbox"><span>say something</span></li>
+    <li><input type="checkbox"><span>rude</span></li>
+</ul>
+</div>
+
+</body>
+</html>

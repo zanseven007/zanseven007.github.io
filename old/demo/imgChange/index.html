@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图片切换2</title>
+    <style>
+    div,input,img{margin:0;padding: 0;}
+    #content{margin: 10px;width: 900px;height: 600px;background: url("img/bcimg1.jpg") no-repeat;background-size: cover;border: 5px solid beige;}
+    input{margin:40px;border-radius:5px;border:2px solid sandybrown;}
+    #content #img-content{width: 800px;height: 500px;}
+    #content #img-content #img-left{width: 400px; height: 300px;margin-right: 60px;float: left;margin-left: 30px;text-align: center;}
+    #content #img-content #img-right {width: 300px; height: 300px;float: left;text-align: center;}
+    #img-left img{width: 380px;height: 280px;border: 10px solid #cccccc;}
+    #img-right img{width: 280px;height: 280px;border: 10px solid #cccccc;}
+    </style>
+    <script>
+        window.onload=function(){
+        var aImg=document.getElementsByTagName("img");
+        var aInput=document.getElementsByTagName("input");
+        var aH3=document.getElementsByTagName("h3");
+        var leftnum=0;
+        var rightnum=0;
+        var leftImg=["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+        var rightImg=["img/1.png","img/2.png","img/3.png","img/4.png"];
+            aImg[0].onclick=upleftfc;
+            aImg[1].onclick=uprightfc;
+            aInput[1].onclick=function(){
+                upleftfc();
+                uprightfc();
+            };
+            aInput[0].onclick=function(){
+                downleftfc();
+                downrightfc();
+            };
+                    function uprightfc()
+                    { if(rightnum<3)
+                        {   rightnum++;
+                            aImg[1].src=rightImg[rightnum];
+                            aH3[1].innerHTML="这是第二组的第"+(parseInt(rightnum)+1)+"张";
+                        }
+                        else{rightnum=0;
+                            aImg[1].src=rightImg[rightnum];
+                            aH3[1].innerHTML="这是第二组的第"+(parseInt(rightnum)+1)+"张";
+                        }
+
+                    }
+            function upleftfc(){
+                if(leftnum<3)
+                {leftnum++;
+                    aImg[0].src=leftImg[leftnum];
+                    aH3[0].innerHTML="这是第一组的第"+(parseInt(leftnum)+1)+"张";
+                }
+                else{leftnum=0;
+                    aImg[0].src=leftImg[leftnum];
+                    aH3[0].innerHTML="这是第一组的第"+(parseInt(leftnum)+1)+"张";
+                }
+
+            }
+            function downleftfc(){
+                if(leftnum>0)
+                {   leftnum--;
+                    aImg[0].src=leftImg[leftnum];
+                    aH3[0].innerHTML="这是第一组的第"+(parseInt(leftnum)+1)+"张";
+                }
+                else{leftnum=3;
+                    aImg[0].src=leftImg[leftnum];
+                    aH3[0].innerHTML="这是第一组的第"+(parseInt(leftnum)+1)+"张";
+                }
+
+            }
+            function downrightfc(){
+                if(rightnum>0)
+                {   rightnum--;
+                    aImg[1].src=rightImg[rightnum];
+                    aH3[1].innerHTML="这是第二组的第"+(parseInt(rightnum)+1)+"张";
+                }
+                else{rightnum=3;
+                    aImg[1].src=rightImg[rightnum];
+                    aH3[1].innerHTML="这是第二组的第"+(parseInt(rightnum)+1)+"张";
+                }
+
+            }
+
+
+    };
+    </script>
+</head>
+<body>
+<div id="content">
+    <input type="button" value="上一组" />
+    <input type="button" value="下一组" />
+    <div id="img-content">
+        <div id="img-left">
+            <img src="img/1.jpg" />
+            <h3>这是第一组的第1张</h3>
+        </div>
+        <div id="img-right">
+            <img src="img/1.png" />
+            <h3>这是第二组的第1张</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>

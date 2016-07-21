@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>qq</title>
+    <style>
+        ul,h2{margin: 0;padding: 0;}
+        li{list-style: none;}
+        h2{margin-left: 10px;background: url("img/ico1.gif") no-repeat 5px aqua;width: 200px;height: 50px;text-align: center;line-height: 50px;}
+        .active{background: url("img/ico2.gif") no-repeat 5px orange;margin-left: 10px;}
+        #lis ul{display: none;}
+        #lis ul li{text-align:center; border-bottom: 1px solid black; margin-left: 10px;width: 200px;}
+        .hover{background:yellow;}
+    </style>
+    <script>
+        window.onload=function() {
+            var oUl = document.getElementById("lis");
+            var aH2 = oUl.getElementsByTagName("h2");
+            var aUl = oUl.getElementsByTagName("ul");
+            var arrLi = [];
+            for (var i = 0; i < aUl.length; i++) {
+                var aLi = aUl[i].getElementsByTagName("li");
+                for (var j = 0; j < aLi.length; j++) {
+                    arrLi.push(aLi[j]);
+                }
+            }
+            for(var i=0;i<aH2.length;i++)
+            {   aH2[i].index=i;
+                aH2[i].onclick=function(){
+                    for(var j=0;j<aUl.length;j++)
+                    {
+                        aUl[j].style.display="none";
+                    }
+
+                    if(this.className=="")
+                        {for(var k=0;k<aH2.length;k++) {
+                            aH2[k].className="";
+                        }
+                            this.className = "active";
+                            aUl[this.index].style.display="block";
+                        }
+                        else{
+                            aUl[this.index].style.display="none";
+                            this.className="";}
+
+
+                };
+            }
+            for(var i=0;i<arrLi.length;i++)
+            {
+                arrLi[i].onclick= function(){
+                    for(var i=0;i<arrLi.length;i++){
+                        arrLi[i].className="";
+                    }
+                    this.className="hover";
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul id="lis">
+        <li>
+            <h2>我的好友</h2>
+            <ul>
+                <li>张三</li>
+                <li>张三</li>
+                <li>张三</li>
+                <li>张三</li>
+            </ul>
+        </li>
+        <li>
+            <h2>企业好友</h2>
+            <ul>
+                <li>李四</li>
+                <li>李四</li>
+                <li>李四</li>
+                <li>李四</li>
+            </ul>
+        </li>
+        <li>
+            <h2>黑名单</h2>
+            <ul>
+            <li>李小四</li>
+            <li>张小三</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
