@@ -233,7 +233,7 @@ ul, ol {
 	.intro {
 		display: table;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		padding: 100px 0;
 		text-align: center;
 		color: #fff;
@@ -284,6 +284,7 @@ ul, ol {
 	}
 	#about .about-text {
 		margin-left: 10px;
+		text-align: center;
 	}
 	#about H4 {
 		color: #333;
@@ -324,6 +325,9 @@ ul, ol {
 		font-size: 50px;
 		color: #2c3e50;
 		margin-bottom: 20px;
+	}
+	#services a{
+		color: #E87E04;
 	}
 	/* Portfolio Section */
 	#portfolio {
