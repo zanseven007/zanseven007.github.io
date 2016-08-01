@@ -3,13 +3,14 @@ var path = require('path');
 var autoprefixer = require('autoprefixer');
 
 var ROOT_PATH = path.resolve(__dirname);
-var APP_PATH = path.resolve(ROOT_PATH, 'src');
+var JS_APP_PATH = path.resolve(ROOT_PATH, 'js');
+var CSS_APP_PATH = path.resolve(ROOT_PATH, 'css');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
 
 module.exports = {
     devtool: 'source-map',
 
-    entry: './src/js/script.js',
+    entry: './js/script.js',
 
     output: {
         path: BUILD_PATH,
@@ -26,7 +27,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel',
-                include: APP_PATH,
+                include: JS_APP_PATH,
                 query: {
                     presets: ['es2015']
                 }
@@ -34,7 +35,7 @@ module.exports = {
             {
                 test: /\.(css|scss)$/,
                 loaders: ['style', 'css', 'postcss', 'sass'],
-                include: APP_PATH
+                include: CSS_APP_PATH
             },
             {
                 test: /\.(png|jpg)$/,

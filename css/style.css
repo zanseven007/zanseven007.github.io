@@ -237,7 +237,7 @@ ul, ol {
 		padding: 100px 0;
 		text-align: center;
 		color: #fff;
-		background: url(../img/intro-bg.jpg) no-repeat center center;
+		background: url(http://7xljz9.com1.z0.glb.clouddn.com/intro-bg.jpg) no-repeat center center;
 		background-color: #000;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -296,7 +296,7 @@ ul, ol {
 		display: inline-block;
 	}
 	.img-about{
-		background: url(../img/about.jpg) no-repeat 0px -40px;
+		background: url(http://7xljz9.com1.z0.glb.clouddn.com/about.jpg) no-repeat 0px -40px;
 		width: 133px;
 		height: 133px;
 		border-radius: 50%;
@@ -310,7 +310,7 @@ ul, ol {
 	/* Services Section */
 	#services {
 		padding: 80px 0;
-		background: url(../img/services-bg.jpg);
+		background: url(http://7xljz9.com1.z0.glb.clouddn.com/services-bg.jpg);
 		background-size: cover;
 		background-attachment: fixed;
 	}
@@ -469,7 +469,7 @@ ul, ol {
 	/* Skills Section */
 	#skills {
 		padding: 80px 0;
-		background: url(../img/skills-bg.jpg);
+		background: url(http://7xljz9.com1.z0.glb.clouddn.com/skills-bg.jpg);
 		background-size: cover;
 		background-attachment: fixed;
 	}
