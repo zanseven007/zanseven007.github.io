@@ -1,0 +1,12 @@
+.intro-title{
+	position: relative;
+	z-index: 9999;
+}
+.intro .intro-body .intro-text{
+	float: none;
+	max-width: none;
+}
+#about,#services,#portfolio,#skills{
+	position: relative;
+	z-index: 2;
+}
