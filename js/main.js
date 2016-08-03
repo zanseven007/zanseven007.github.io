@@ -61,7 +61,6 @@ $('#nav').affix({
 
   	// Portfolio isotope filter
     $(window).load(function() {
-        $('#preloader').fadeOut();
         $('body').addClass('load');
         var $container = $('.portfolio-items');
         $container.isotope({
@@ -94,6 +93,7 @@ $('#nav').affix({
 
 
 	$(document).ready(function( $ ) {
+    $('#preloader').fadeOut();
 		if($("span.count").length > 0){	
 			$('span.count').counterUp({
 					delay: 10, // the delay time in ms
