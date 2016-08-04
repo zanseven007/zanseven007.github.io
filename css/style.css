@@ -961,3 +961,23 @@ ul, ol {
 			padding: 10px 100px 20px 20px;
 		}
 	}
+	@media only screen and (max-width: 720px){
+		#intro-video{
+			display: none;
+		}
+		.intro {
+			display: table;
+			width: 100%;
+			height: 100%;
+			padding: 100px 0;
+			text-align: center;
+			color: #fff;
+			background: url(http://7xljz9.com1.z0.glb.clouddn.com/intro-bg.jpg) no-repeat center center;
+			background-color: #000;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			background-size: cover;
+			-o-background-size: cover;
+			background-attachment: fixed;
+		}
+	}
