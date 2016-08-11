@@ -93,6 +93,8 @@ $('#nav').affix({
 
 
 	$(document).ready(function( $ ) {
+    var b=["\n %c %c %c 赞鱼鱼  - ✰  ✰  %c  %c  http://www.zanyuyu.com/  %c %c ♥%c♥%c♥ \n\n","background: #ff66a5; padding:5px 0;","background: #ff66a5; padding:5px 0;","color: #ff66a5; background: #030307; padding:5px 0;","background: #ff66a5; padding:5px 0;","background: #ffc3dc; padding:5px 0;","background: #ff66a5; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;","color: #ff2424; background: #fff; padding:5px 0;"];
+    window.console.log.apply(console,b);
     $('#preloader').fadeOut();
 		if($("span.count").length > 0){	
 			$('span.count').counterUp({
